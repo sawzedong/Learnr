@@ -19,7 +19,7 @@ class SubjectsCollectionViewController: UIViewController, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! SubjectsCollectionViewCell
         cell.subjectLabel.text = self.items[indexPath.row]
-        cell.backgroundColor = UIColor(red: CGFloat.random(in: 0.5...1), green: CGFloat.random(in: 0.5...1), blue: CGFloat.random(in: 0.5...1), alpha: 1)
+        cell.backgroundColor = UIColor(hue: CGFloat.random(in: 0...1), saturation: 0.3, brightness: 1, alpha: 1)
         
         //for shadow and outline - Vicky
         //cell.layer.shadowColor = UIColor.black.cgColor
