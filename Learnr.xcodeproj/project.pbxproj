@@ -24,7 +24,7 @@
 		6D0A8E642512044A00EA5425 /* SettingsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		6D0A8E662512045800EA5425 /* WorkAnalysisDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkAnalysisDetailViewController.swift; sourceTree = "<group>"; };
 		6D0A8E682512047600EA5425 /* SubjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectDetailViewController.swift; sourceTree = "<group>"; };
-		6D0A8E6A2512071D00EA5425 /* SubjectsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsCollectionViewController.swift; sourceTree = "<group>"; };
+		6D0A8E6A2512071D00EA5425 /* SubjectsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsCollectionViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		6D0A8E6C251208E100EA5425 /* SubjectsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsCollectionViewCell.swift; sourceTree = "<group>"; };
 		6DFB52E12509B2A100F35239 /* Learnr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Learnr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DFB52E42509B2A100F35239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };

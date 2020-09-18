@@ -216,7 +216,7 @@
                             <outlet property="delegate" destination="h4N-FM-KTR" id="yGS-3X-ouj"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Your Subjects" id="bwQ-vn-RaR"/>
+                    <navigationItem key="navigationItem" title="Your Subjects" id="Eie-2r-5ZA"/>
                     <connections>
                         <segue destination="OOi-rd-ce3" kind="presentation" identifier="openSubjectDetail" id="rfK-1N-LeC"/>
                     </connections>
@@ -331,7 +331,7 @@
         <scene sceneID="Qgz-5Y-N7P">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DVF-lB-Rch" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Work Analysis" image="doc" catalog="system" id="swy-v1-MPt"/>
+                    <tabBarItem key="tabBarItem" title="Work Analysis" image="doc.text" catalog="system" id="swy-v1-MPt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="y5G-DW-zVy">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -348,7 +348,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="doc" catalog="system" width="115" height="128"/>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
