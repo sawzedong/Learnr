@@ -2,7 +2,7 @@
 //  SettingsDetailViewController.swift
 //  Learnr
 //
-//  Created by Shaw Sheng Saw on 16/9/20.
+//  Created by Shaw Sheng Saw on 18/9/20.
 //  Copyright © 2020 Techiaki. All rights reserved.
 //
 
