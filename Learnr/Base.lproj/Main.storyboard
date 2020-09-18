@@ -42,8 +42,8 @@
             <objects>
                 <navigationController id="saR-pW-SeY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="Lwm-hd-6xj"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ras-zR-V1h">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ras-zR-V1h">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -119,7 +119,7 @@
             </objects>
             <point key="canvasLocation" x="-1939" y="-277"/>
         </scene>
-        <!--Subjects-->
+        <!--Your Subjects-->
         <scene sceneID="rcM-i3-Cz6">
             <objects>
                 <collectionViewController id="h4N-FM-KTR" customClass="SubjectsCollectionViewController" customModule="Learnr" customModuleProvider="target" sceneMemberID="viewController">
@@ -170,13 +170,53 @@
                                     <outlet property="subjectLogo" destination="9Hk-v1-Jez" id="y2g-32-VTF"/>
                                 </connections>
                             </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xKP-gn-XuA">
+                                <rect key="frame" x="286" y="11" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rvt-fs-ZWZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7zi-J5-qrC">
+                                <rect key="frame" x="0.0" y="160" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="v7z-54-LIV">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4oD-3e-7ea">
+                                <rect key="frame" x="143" y="160" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bz5-ve-Wg8">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kuR-t7-IOB">
+                                <rect key="frame" x="286" y="160" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pjQ-63-Zo9">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nyL-K1-QCA">
+                                <rect key="frame" x="0.0" y="298" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1N2-9e-DyZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
                         </cells>
                         <connections>
                             <outlet property="dataSource" destination="h4N-FM-KTR" id="URW-sO-ws2"/>
                             <outlet property="delegate" destination="h4N-FM-KTR" id="yGS-3X-ouj"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Subjects" id="bwQ-vn-RaR"/>
+                    <navigationItem key="navigationItem" title="Your Subjects" id="bwQ-vn-RaR"/>
                     <connections>
                         <segue destination="OOi-rd-ce3" kind="presentation" identifier="openSubjectDetail" id="rfK-1N-LeC"/>
                     </connections>
@@ -239,8 +279,8 @@
             <objects>
                 <navigationController id="OvX-hG-5uT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" id="ueL-mU-QVM"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3tq-Cx-SKd">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="3tq-Cx-SKd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -274,8 +314,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5cQ-H4-PDf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Subjects" image="tray" catalog="system" id="8cW-eN-cBE"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7HZ-Nw-kq7">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="7HZ-Nw-kq7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -293,8 +333,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DVF-lB-Rch" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Work Analysis" image="doc" catalog="system" id="swy-v1-MPt"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y5G-DW-zVy">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="y5G-DW-zVy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
