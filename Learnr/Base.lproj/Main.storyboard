@@ -176,7 +176,13 @@
                             <outlet property="delegate" destination="h4N-FM-KTR" id="yGS-3X-ouj"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Your Subjects" id="Eie-2r-5ZA"/>
+                    <navigationItem key="navigationItem" title="Your Subjects" id="Eie-2r-5ZA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YV2-VZ-09o">
+                            <connections>
+                                <action selector="addSubject:" destination="h4N-FM-KTR" id="wPX-LF-iYM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="OOi-rd-ce3" kind="presentation" identifier="openSubjectDetail" id="rfK-1N-LeC"/>
                     </connections>

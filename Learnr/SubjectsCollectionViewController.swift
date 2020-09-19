@@ -59,4 +59,49 @@ class SubjectsCollectionViewController: UIViewController, UICollectionViewDataSo
         //handle clicks
         performSegue(withIdentifier: "openSubjectDetail", sender: nil)
     }
+    
+    //MARK: - Adding a new subject
+    @IBAction func addSubject(_ sender: Any) {
+        // set up UIAlertController
+        let ac = UIAlertController(title: "Enter answer", message: nil, preferredStyle: .alert)
+        ac.addTextField()
+        
+        // !Failed attempt to add PickerView
+        /*
+        let pv = UIPickerView()
+        let pickerData = ["Humanities", "Languages", "Sciences/Math"]
+        func numberOfComponents(in pickerView: UIPickerView) -> Int {
+            return 1
+        }
+        
+        // The number of rows of data
+        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            return pickerData.count
+        }
+        
+        // The data to return fopr the row and component (column) that's being passed in
+        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            return pickerData[row]
+        }
+        ac.view.addSubview(pv)
+        */
+        
+        let submitAction = UIAlertAction(title: "Submit", style: .default) { (_) in
+            let answer = ac.textFields![0]
+            if (answer.text! != "") {
+                print(answer.text!)
+                self.items.append(answer.text!);
+                print(self.items)
+//                self.collectionView.reloadData()
+// !Line 95 throws error: Type of expression is ambiguous without more context
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+
+        ac.addAction(cancelAction)
+        ac.addAction(submitAction)
+
+        present(ac, animated: true)
+    }
 }
