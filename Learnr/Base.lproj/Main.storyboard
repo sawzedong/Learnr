@@ -103,7 +103,7 @@
             </objects>
             <point key="canvasLocation" x="2839.130434782609" y="-275.22321428571428"/>
         </scene>
-        <!--Subject Detail Table View Controller-->
+        <!--Physics-->
         <scene sceneID="CRA-aS-lDa">
             <objects>
                 <tableViewController id="OBp-4k-7n8" customClass="SubjectDetailTableViewController" customModule="Learnr" customModuleProvider="target" sceneMemberID="viewController">
@@ -189,7 +189,7 @@
                             <outlet property="delegate" destination="OBp-4k-7n8" id="K7r-6g-RTe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8Tx-FS-skv"/>
+                    <navigationItem key="navigationItem" title="Physics" id="8Tx-FS-skv"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWd-Yl-LMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

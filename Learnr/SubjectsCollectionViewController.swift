@@ -5,10 +5,10 @@ class SubjectsCollectionViewController: UICollectionViewController, UICollection
     
     // placeholder items
     var items: [Subject] = [
-        Subject(name: "1", assignments: [
-            Assignment(name: "Homework1", completion: 0.5, timeIntervalSince1970: 1600582389),
-            Assignment(name: "Homework2", completion: 0.7, timeIntervalSince1970: 1600585389),
-            Assignment(name: "Homework3", completion: 0.3, timeIntervalSince1970: 1600588389),
+        Subject(name: "Physics", assignments: [
+            Assignment(name: "Homework 1", completion: 0.5, timeIntervalSince1970: 1600582389),
+            Assignment(name: "Homework 2", completion: 0.7, timeIntervalSince1970: 1600585389),
+            Assignment(name: "Homework 3", completion: 0.3, timeIntervalSince1970: 1600588389),
         ]),
         Subject(name: "2", assignments: []),
         Subject(name: "3", assignments: []),
@@ -83,7 +83,7 @@ class SubjectsCollectionViewController: UICollectionViewController, UICollection
     //MARK: - Adding a new subject
     @IBAction func addSubject(_ sender: Any) {
         // set up UIAlertController
-        let ac = UIAlertController(title: "Enter answer", message: nil, preferredStyle: .alert)
+        let ac = UIAlertController(title: "Enter Subject Title", message: nil, preferredStyle: .alert)
         ac.addTextField()
         
         let submitAction = UIAlertAction(title: "Submit", style: .default) { (_) in
