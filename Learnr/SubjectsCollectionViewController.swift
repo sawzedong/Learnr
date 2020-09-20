@@ -1,24 +1,34 @@
 import UIKit
-class SubjectsCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class SubjectsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let reuseIdentifier = "subjectCell"
     
     // placeholder items
-    var items = ["1", "2", "3", "4", "5", "6"]
+    var items: [Subject] = [
+        Subject(name: "1", assignments: [
+            Assignment(name: "Homework1", completion: 0.5, timeIntervalSince1970: 1600582389),
+            Assignment(name: "Homework2", completion: 0.7, timeIntervalSince1970: 1600585389),
+            Assignment(name: "Homework3", completion: 0.3, timeIntervalSince1970: 1600588389),
+        ]),
+        Subject(name: "2", assignments: []),
+        Subject(name: "3", assignments: []),
+        Subject(name: "4", assignments: []),
+        Subject(name: "5", assignments: [])
+    ]
     
     
     // MARK: - UICollectionViewDataSource protocol
     
     // number of cells in collection view
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.items.count
     }
     
     
     // make a cell for each cell index path
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! SubjectsCollectionViewCell
-        cell.subjectLabel.text = self.items[indexPath.row]
+        cell.subjectLabel.text = self.items[indexPath.row].name
         cell.backgroundColor = UIColor(hue: CGFloat.random(in: 0...1), saturation: 0.3, brightness: 1, alpha: 1)
         
         //for shadow and outline - Vicky
@@ -36,7 +46,7 @@ class SubjectsCollectionViewController: UIViewController, UICollectionViewDataSo
     }
  
     /*var customTabBarItem:UITabBarItem = UITabBarItem(title: nil, image: UIImage(named: "YOUR_IMAGE_NAME")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), selectedImage: UIImage(named: "YOUR_IMAGE_NAME")) */
-    //I added the above as potential code to include custom icons for the icons on the tab bar controller if needed -Vicky
+    // I added the above as potential code to include custom icons for the icons on the tab bar controller if needed -Vicky
     
     // MARK: - UICollectionViewDelegateFlowLayout
     
@@ -55,9 +65,19 @@ class SubjectsCollectionViewController: UIViewController, UICollectionViewDataSo
     
     // MARK: - UICollectionViewDelegate protocol
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //handle clicks
-        performSegue(withIdentifier: "openSubjectDetail", sender: nil)
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showSubjectDetail", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showSubjectDetail",
+            let destVC = segue.destination as? SubjectDetailTableViewController,
+            let indexPath = self.collectionView.indexPathsForSelectedItems?.first {
+            destVC.subject = items[indexPath.row]
+        }
+        
     }
     
     //MARK: - Adding a new subject
@@ -66,34 +86,15 @@ class SubjectsCollectionViewController: UIViewController, UICollectionViewDataSo
         let ac = UIAlertController(title: "Enter answer", message: nil, preferredStyle: .alert)
         ac.addTextField()
         
-        // !Failed attempt to add PickerView
-        /*
-        let pv = UIPickerView()
-        let pickerData = ["Humanities", "Languages", "Sciences/Math"]
-        func numberOfComponents(in pickerView: UIPickerView) -> Int {
-            return 1
-        }
-        
-        // The number of rows of data
-        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            return pickerData.count
-        }
-        
-        // The data to return fopr the row and component (column) that's being passed in
-        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return pickerData[row]
-        }
-        ac.view.addSubview(pv)
-        */
-        
         let submitAction = UIAlertAction(title: "Submit", style: .default) { (_) in
             let answer = ac.textFields![0]
             if (answer.text! != "") {
                 print(answer.text!)
-                self.items.append(answer.text!);
+                self.items.append(
+                    Subject(name: answer.text!)
+                );
                 print(self.items)
-//                self.collectionView.reloadData()
-// !Line 95 throws error: Type of expression is ambiguous without more context
+                self.collectionView.reloadData()
             }
         }
         
