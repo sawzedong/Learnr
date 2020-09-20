@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185C3AD1251760CE00F72E56 /* WorkAnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C3AD0251760CE00F72E56 /* WorkAnalysisViewController.swift */; };
 		6D0A8E672512045800EA5425 /* WorkAnalysisDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A8E662512045800EA5425 /* WorkAnalysisDetailViewController.swift */; };
 		6D0A8E6B2512071D00EA5425 /* SubjectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A8E6A2512071D00EA5425 /* SubjectsCollectionViewController.swift */; };
 		6D0A8E6D251208E100EA5425 /* SubjectsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A8E6C251208E100EA5425 /* SubjectsCollectionViewCell.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		185C3AD0251760CE00F72E56 /* WorkAnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkAnalysisViewController.swift; sourceTree = "<group>"; };
 		6D0A8E662512045800EA5425 /* WorkAnalysisDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkAnalysisDetailViewController.swift; sourceTree = "<group>"; };
 		6D0A8E6A2512071D00EA5425 /* SubjectsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsCollectionViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		6D0A8E6C251208E100EA5425 /* SubjectsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				6D0A8E662512045800EA5425 /* WorkAnalysisDetailViewController.swift */,
 				6D0A8E6A2512071D00EA5425 /* SubjectsCollectionViewController.swift */,
 				6D0A8E6C251208E100EA5425 /* SubjectsCollectionViewCell.swift */,
+				185C3AD0251760CE00F72E56 /* WorkAnalysisViewController.swift */,
 				6DFB52E42509B2A100F35239 /* AppDelegate.swift */,
 				6DFB52E62509B2A100F35239 /* SceneDelegate.swift */,
 				6DFB52E82509B2A100F35239 /* ProfileDetailViewController.swift */,
@@ -164,6 +167,7 @@
 				6DFB52E92509B2A100F35239 /* ProfileDetailViewController.swift in Sources */,
 				6D0A8E6D251208E100EA5425 /* SubjectsCollectionViewCell.swift in Sources */,
 				6D32762A25170BAB00C7EADC /* SubjectDetailTableViewController.swift in Sources */,
+				185C3AD1251760CE00F72E56 /* WorkAnalysisViewController.swift in Sources */,
 				6D0A8E672512045800EA5425 /* WorkAnalysisDetailViewController.swift in Sources */,
 				6D0A8E6B2512071D00EA5425 /* SubjectsCollectionViewController.swift in Sources */,
 				6DFB52E52509B2A100F35239 /* AppDelegate.swift in Sources */,

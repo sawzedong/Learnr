@@ -74,7 +74,7 @@
         <!--Work Analysis-->
         <scene sceneID="sPO-v0-qvd">
             <objects>
-                <viewController id="wTX-og-aJW" sceneMemberID="viewController">
+                <viewController id="wTX-og-aJW" customClass="WorkAnalysisViewController" customModule="Learnr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HsT-w5-L7w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
