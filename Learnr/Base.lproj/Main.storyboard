@@ -79,19 +79,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2m-rF-Mn6" customClass="PieChart" customModule="PieCharts">
-                                <rect key="frame" x="10" y="150" width="394" height="394"/>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2m-rF-Mn6" customClass="PieChart" customModule="PieCharts">
+                                <rect key="frame" x="0.0" y="126" width="362" height="351"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="U2m-rF-Mn6" secondAttribute="height" multiplier="1:1" id="TxV-Sq-bce"/>
-                                </constraints>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                        <real key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="yrR-yh-8RL" firstAttribute="trailing" secondItem="U2m-rF-Mn6" secondAttribute="trailing" constant="10" id="CxI-af-i1w"/>
-                            <constraint firstItem="U2m-rF-Mn6" firstAttribute="top" secondItem="yrR-yh-8RL" secondAttribute="top" constant="10" id="Sgs-3i-QKc"/>
-                            <constraint firstItem="U2m-rF-Mn6" firstAttribute="leading" secondItem="yrR-yh-8RL" secondAttribute="leading" constant="10" id="hJ9-v3-ZQR"/>
+                            <constraint firstItem="yrR-yh-8RL" firstAttribute="trailing" secondItem="U2m-rF-Mn6" secondAttribute="trailing" constant="52" id="9S6-dZ-Zaz"/>
+                            <constraint firstItem="U2m-rF-Mn6" firstAttribute="leading" secondItem="yrR-yh-8RL" secondAttribute="leading" id="APi-x2-yVI"/>
+                            <constraint firstItem="yrR-yh-8RL" firstAttribute="bottom" secondItem="U2m-rF-Mn6" secondAttribute="bottom" constant="336" id="TV6-lZ-cOX"/>
+                            <constraint firstItem="U2m-rF-Mn6" firstAttribute="top" secondItem="HsT-w5-L7w" secondAttribute="topMargin" constant="-14" id="qiv-ZX-myA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yrR-yh-8RL"/>
                     </view>
@@ -102,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bo8-Yt-6xH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2055" y="-277"/>
+            <point key="canvasLocation" x="2053.6231884057975" y="-277.23214285714283"/>
         </scene>
         <!--Work Analysis Detail View Controller-->
         <scene sceneID="Cdc-i4-Zyk">
