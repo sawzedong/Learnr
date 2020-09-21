@@ -79,16 +79,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U2m-rF-Mn6">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2m-rF-Mn6" customClass="PieChart" customModule="PieCharts">
+                                <rect key="frame" x="10" y="150" width="394" height="394"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="U2m-rF-Mn6" secondAttribute="height" multiplier="1:1" id="TxV-Sq-bce"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yrR-yh-8RL" firstAttribute="trailing" secondItem="U2m-rF-Mn6" secondAttribute="trailing" constant="10" id="CxI-af-i1w"/>
+                            <constraint firstItem="U2m-rF-Mn6" firstAttribute="top" secondItem="yrR-yh-8RL" secondAttribute="top" constant="10" id="Sgs-3i-QKc"/>
+                            <constraint firstItem="U2m-rF-Mn6" firstAttribute="leading" secondItem="yrR-yh-8RL" secondAttribute="leading" constant="10" id="hJ9-v3-ZQR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yrR-yh-8RL"/>
                     </view>
                     <navigationItem key="navigationItem" title="Work Analysis" id="xeh-jV-ACq"/>
+                    <connections>
+                        <outlet property="chartView" destination="U2m-rF-Mn6" id="mif-N7-odq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bo8-Yt-6xH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

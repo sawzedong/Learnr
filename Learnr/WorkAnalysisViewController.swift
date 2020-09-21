@@ -7,23 +7,25 @@
 //
 
 import UIKit
+import PieCharts
 
 class WorkAnalysisViewController: UIViewController {
 
 //    MARK: - Pie Chart Setup
 //    https://github.com/i-schuetz/PieCharts
-//    @IBOutlet weak var chartView: PieChart!
+    @IBOutlet weak var chartView: PieChart!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        /*
+        // placeholder data from documentation
         chartView.models = [
             PieSliceModel(value: 2.1, color: UIColor.yellow),
             PieSliceModel(value: 3, color: UIColor.blue),
             PieSliceModel(value: 1, color: UIColor.green)
         ]
-        */
+        
     }
     
 
