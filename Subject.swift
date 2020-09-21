@@ -7,23 +7,27 @@
 //
 
 import Foundation
+import UIKit
 
 // note: please add other information if needed
 
 class Subject {
     var name: String
     var assignments: [Assignment]
+    var color: UIColor
     
     // initialised with assignments
     init(name: String, assignments: [Assignment]) {
         self.name = name
         self.assignments = assignments
+        self.color = UIColor(hue: CGFloat.random(in: 0...1), saturation: 0.3, brightness: 0.97, alpha: 1)
     }
     
     // initialised without assignments, default to no assignments
     init(name: String) {
         self.name = name
         self.assignments = []
+        self.color = UIColor(hue: CGFloat.random(in: 0...1), saturation: 0.3, brightness: 0.97, alpha: 1)
     }
     
 }
