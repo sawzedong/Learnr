@@ -10,10 +10,20 @@ import UIKit
 
 class WorkAnalysisViewController: UIViewController {
 
+//    MARK: - Pie Chart Setup
+//    https://github.com/i-schuetz/PieCharts
+//    @IBOutlet weak var chartView: PieChart!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+       
+        /*
+        chartView.models = [
+            PieSliceModel(value: 2.1, color: UIColor.yellow),
+            PieSliceModel(value: 3, color: UIColor.blue),
+            PieSliceModel(value: 1, color: UIColor.green)
+        ]
+        */
     }
     
 
@@ -29,25 +39,6 @@ class WorkAnalysisViewController: UIViewController {
 
 }
 
-//MARK: -Pie chart setup
 
-/*
-let surface = SCIPieChartSurface()
-surface.translatesAutoresizingMaskIntoConstraints = true
-surface.frame = bounds
-surface.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-self.addSubview(surface)
 
-let pieSeries = SCIPieRenderableSeries()
 
-// Adding pie segment
-let segment = SCIPieSegment()
-segment.fillStyle = SCIRadialGradientBrushStyle.init(colorCodeStart: 0xff84BC3D, finish: 0xff5B8829)
-segment.value = 100.0
-segment.title = "Segment"
-
-pieSeries.segments.add(segment)
-
-// add the SCIPieRenderableSeries to the SCIPieChartSurface
-surface.renderableSeries.add(pieSeries)
-*/
