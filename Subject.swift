@@ -67,7 +67,7 @@ class Assignment {
     
     func getStringDate() -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd MMM yyyy, HH:mm:ss"
+        formatter.dateFormat = "dd MMM yyyy, HH:mm"
         
         let myString = formatter.string(from: self.dueDate)
 

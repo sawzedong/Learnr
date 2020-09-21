@@ -41,7 +41,7 @@ class SubjectDetailTableViewController: UITableViewController {
         if let cell = cell as? SubjectDetailTableViewCell {
             let currentSubject = subject.assignments[indexPath.row]
             cell.progressView.progress = Float(currentSubject.completion)
-            cell.completionLabel.text = "\(round(currentSubject.completion * 100))%"
+            cell.completionLabel.text = "\(Int(round(currentSubject.completion * 100)))%"
             cell.dueDateLabel.text = currentSubject.getStringDate()
             cell.homeworkNameLabel.text = currentSubject.name
         }

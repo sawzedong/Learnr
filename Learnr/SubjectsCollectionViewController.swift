@@ -6,9 +6,9 @@ class SubjectsCollectionViewController: UICollectionViewController, UICollection
     // placeholder items
     var items: [Subject] = [
         Subject(name: "Physics", assignments: [
-            Assignment(name: "Homework 1", completion: 0.5, timeIntervalSince1970: 1600582389),
-            Assignment(name: "Homework 2", completion: 0.7, timeIntervalSince1970: 1600585389),
-            Assignment(name: "Homework 3", completion: 0.3, timeIntervalSince1970: 1600588389),
+            Assignment(name: "Homework 1", completion: 0.5, timeIntervalSince1970: 1601049540),
+            Assignment(name: "Homework 2", completion: 0.7, timeIntervalSince1970: 1601540700),
+            Assignment(name: "Homework 3", completion: 0.3, timeIntervalSince1970: 1601740740),
         ]),
         Subject(name: "2", assignments: []),
         Subject(name: "3", assignments: []),
