@@ -21,9 +21,10 @@ class WorkAnalysisViewController: UIViewController {
        
         // placeholder data from documentation
         chartView.models = [
-            PieSliceModel(value: 2.1, color: UIColor.yellow),
-            PieSliceModel(value: 3, color: UIColor.blue),
-            PieSliceModel(value: 1, color: UIColor.green)
+
+            PieSliceModel(value: 25, color: UIColor.red),
+            PieSliceModel(value: 75, color: UIColor.green)
+
         ]
         
     }

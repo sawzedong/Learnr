@@ -4,14 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Learnr.xcscheme_^#shared#^_</key>
+		<key>PieCharts.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-<<<<<<< HEAD
+			<integer>2</integer>
+		</dict>
+		<key>Pods-Learnr.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>0</integer>
-=======
-			<integer>1</integer>
->>>>>>> changed radius of pie chart, edited positioning, changed colour and disabled user interaction
 		</dict>
 	</dict>
 </dict>
