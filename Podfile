@@ -7,5 +7,6 @@ target 'Learnr' do
 
   # Pods for Learnr
   pod 'PieCharts'
+  pod 'SideMenu'
 
 end

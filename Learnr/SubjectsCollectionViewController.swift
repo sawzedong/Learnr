@@ -103,4 +103,11 @@ class SubjectsCollectionViewController: UICollectionViewController, UICollection
 
         present(ac, animated: true)
     }
+    
+    
+    
+    @IBAction func screenSwipedFromLeftEdgeSubjects(_ sender: Any) {
+        performSegue(withIdentifier: "openNavigation", sender: nil)
+    }
+    
 }

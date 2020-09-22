@@ -39,7 +39,12 @@ class WorkAnalysisViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func screenSwipedFromLeftEdgeWorkAnalysis(_ sender: Any) {
+        print("LEFT EDGE WORK ANALYSIS")
+        performSegue(withIdentifier: "openNavigation", sender: nil)
+    }
+    
 }
 
 

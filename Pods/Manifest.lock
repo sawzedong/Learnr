@@ -1,16 +1,20 @@
 PODS:
   - PieCharts (0.0.7)
+  - SideMenu (6.4.9)
 
 DEPENDENCIES:
   - PieCharts
+  - SideMenu
 
 SPEC REPOS:
   trunk:
     - PieCharts
+    - SideMenu
 
 SPEC CHECKSUMS:
   PieCharts: 30e50dfa7dc19e5b84e9878d32089673ef5d0453
+  SideMenu: 8ef57a3cfc024a2d3fc1c036c7fe98537baec9e0
 
-PODFILE CHECKSUM: 38f01b339a1ff5924e06f3505ffaeea85903de80
+PODFILE CHECKSUM: 26b1410f45404af8cfba2fe6c509bc6ff037e585
 
 COCOAPODS: 1.9.3

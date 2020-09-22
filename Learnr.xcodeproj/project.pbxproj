@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		6D3276282517058400C7EADC /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3276272517058400C7EADC /* Subject.swift */; };
 		6D32762A25170BAB00C7EADC /* SubjectDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D32762925170BAB00C7EADC /* SubjectDetailTableViewController.swift */; };
 		6D32762C25172EDA00C7EADC /* SubjectDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D32762B25172EDA00C7EADC /* SubjectDetailTableViewCell.swift */; };
+		6DF6386C2519EA0F002F60CF /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF6386B2519EA0F002F60CF /* SettingsTableViewController.swift */; };
 		6DFB52E52509B2A100F35239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFB52E42509B2A100F35239 /* AppDelegate.swift */; };
 		6DFB52E72509B2A100F35239 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFB52E62509B2A100F35239 /* SceneDelegate.swift */; };
 		6DFB52E92509B2A100F35239 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFB52E82509B2A100F35239 /* ProfileDetailViewController.swift */; };
@@ -35,6 +36,7 @@
 		6D3276272517058400C7EADC /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = SOURCE_ROOT; };
 		6D32762925170BAB00C7EADC /* SubjectDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectDetailTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		6D32762B25172EDA00C7EADC /* SubjectDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectDetailTableViewCell.swift; sourceTree = "<group>"; };
+		6DF6386B2519EA0F002F60CF /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		6DFB52E12509B2A100F35239 /* Learnr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Learnr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DFB52E42509B2A100F35239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DFB52E62509B2A100F35239 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		6DFB52E32509B2A100F35239 /* Learnr */ = {
 			isa = PBXGroup;
 			children = (
+				6DF6386B2519EA0F002F60CF /* SettingsTableViewController.swift */,
 				6D32762B25172EDA00C7EADC /* SubjectDetailTableViewCell.swift */,
 				6D32762925170BAB00C7EADC /* SubjectDetailTableViewController.swift */,
 				6D3276272517058400C7EADC /* Subject.swift */,
@@ -112,7 +115,6 @@
 				1CD39EFB29BACABFFC09ECEA /* Pods-Learnr.debug.xcconfig */,
 				E470920DA8431C65EC91AB4A /* Pods-Learnr.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -239,6 +241,7 @@
 				185C3AD1251760CE00F72E56 /* WorkAnalysisViewController.swift in Sources */,
 				6D0A8E672512045800EA5425 /* WorkAnalysisDetailViewController.swift in Sources */,
 				6D0A8E6B2512071D00EA5425 /* SubjectsCollectionViewController.swift in Sources */,
+				6DF6386C2519EA0F002F60CF /* SettingsTableViewController.swift in Sources */,
 				6DFB52E52509B2A100F35239 /* AppDelegate.swift in Sources */,
 				6D3276282517058400C7EADC /* Subject.swift in Sources */,
 				6DFB52E72509B2A100F35239 /* SceneDelegate.swift in Sources */,
