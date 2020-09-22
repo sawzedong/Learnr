@@ -33,7 +33,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="Mxd-qQ-NAV">
                         <barButtonItem key="leftBarButtonItem" title="More" image="line.horizontal.3" catalog="system" id="NiW-Q8-yYw">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="fzs-dP-TtQ" kind="presentation" identifier="openNavigation" id="YVf-TW-Yej"/>
                             </connections>
@@ -129,7 +128,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Work Analysis" id="xeh-jV-ACq">
                         <barButtonItem key="leftBarButtonItem" title="More" image="line.horizontal.3" catalog="system" id="gCf-TI-Fhx">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="fzs-dP-TtQ" kind="presentation" identifier="openNavigation" id="XFM-LC-piV"/>
                             </connections>
@@ -285,7 +283,6 @@
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9Hk-v1-Jez">
                                             <rect key="frame" x="35" y="16" width="80" height="77.5"/>
-                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="9Hk-v1-Jez" secondAttribute="height" multiplier="1:1" id="DMq-f2-Kz2"/>
                                             </constraints>
@@ -322,13 +319,11 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="My Subjects" id="Eie-2r-5ZA">
                         <barButtonItem key="leftBarButtonItem" title="More" image="line.horizontal.3" catalog="system" id="CrS-Iw-cws">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="fzs-dP-TtQ" kind="presentation" identifier="openNavigation" id="Bbb-Gx-L73"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YV2-VZ-09o">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addSubject:" destination="h4N-FM-KTR" id="wPX-LF-iYM"/>
                             </connections>
@@ -592,8 +587,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bbb-Gx-L73"/>
+        <segue reference="YVf-TW-Yej"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.55927685445778441" green="0.52234726464601788" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="book" catalog="system" width="128" height="101"/>
         <image name="chart.bar" catalog="system" width="128" height="90"/>
