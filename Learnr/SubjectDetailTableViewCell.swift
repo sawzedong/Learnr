@@ -25,7 +25,7 @@ class SubjectDetailTableViewCell: UITableViewCell {
             alpha: 1
         )
     }
-//    143, 133, 226
+//   RGB values for purple theme: 143, 133, 226
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
