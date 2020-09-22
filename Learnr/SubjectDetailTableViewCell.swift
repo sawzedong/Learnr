@@ -17,14 +17,15 @@ class SubjectDetailTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        containerView.layer.cornerRadius = 8
+        containerView.layer.cornerRadius = 12
         containerView.backgroundColor = UIColor(
-            red: (107.0/255.0),
-            green: (225.0/255.0),
-            blue: (255.0/255.0),
+            red: (143.0/255.0),
+            green: (133.0/255.0),
+            blue: (226.0/255.0),
             alpha: 1
         )
     }
+//    143, 133, 226
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
