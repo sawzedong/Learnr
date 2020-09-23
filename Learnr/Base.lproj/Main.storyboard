@@ -255,6 +255,20 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Subject" id="8Tx-FS-skv"/>
                 </tableViewController>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" springLoaded="YES" id="v7V-zW-Kda">
+                    <rect key="frame" x="0.0" y="0.0" width="377" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <segments>
+                        <segment title="Overdue"/>
+                        <segment title="Unfinished"/>
+                        <segment title="Finished"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" red="0.55927685449999998" green="0.52234726460000003" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="categorySelection:" destination="gtU-qh-t8T" eventType="valueChanged" id="BTm-9B-PBr"/>
+                        <action selector="tabSelectionValueChange:" destination="gtU-qh-t8T" eventType="valueChanged" id="b9Y-gx-Rmz"/>
+                    </connections>
+                </segmentedControl>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWd-Yl-LMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1937" y="-279"/>
@@ -357,10 +371,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LDH-eJ-MHW">
-                                <rect key="frame" x="0.0" y="147" width="414" height="128"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QZp-cP-H5A">
                                 <rect key="frame" x="17" y="170" width="377" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -372,12 +382,16 @@
                                 <color key="selectedSegmentTintColor" red="0.55927685449999998" green="0.52234726460000003" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="categorySelection:" destination="gtU-qh-t8T" eventType="valueChanged" id="IKx-3k-xCW"/>
+                                    <action selector="tabSelectionValueChange:" destination="gtU-qh-t8T" eventType="valueChanged" id="qUM-OZ-XR3"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="i8c-lw-5Me"/>
                     </view>
+                    <connections>
+                        <outlet property="tabSelection" destination="QZp-cP-H5A" id="XKf-vh-uVs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViS-ze-vXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -627,7 +641,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YVf-TW-Yej"/>
+        <segue reference="XFM-LC-piV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.55927685445778441" green="0.52234726464601788" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>

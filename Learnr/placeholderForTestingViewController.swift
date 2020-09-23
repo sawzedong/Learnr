@@ -9,7 +9,8 @@
 import UIKit
 
 class placeholderForTestingViewController: UIViewController {
-
+    @IBOutlet weak var tabSelection: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,5 +41,9 @@ class placeholderForTestingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func tabSelectionValueChange(_ sender: Any) {
+        let current = tabSelection.selectedSegmentIndex
+        print(current)
+    }
+    
 }

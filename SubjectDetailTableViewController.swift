@@ -11,15 +11,24 @@ import UIKit
 class SubjectDetailTableViewController: UITableViewController {
 
     var subject: Subject!
+    var focusedCompletion: completionStatus = .overdue
+    var focusedAssignments: [Assignment] = []
+    
+    // to change the viewed cells, change the focusedCompletion value and call the loadData() function
+    func loadData() {
+        for assignment in subject.assignments {
+            assignment.updateCompletion()
+            print(assignment.completeStatus)
+        }
+        focusedAssignments = subject.assignments.filter { $0.completeStatus == focusedCompletion }
+        
+        self.tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = subject.name
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        loadData()
     }
 
     // MARK: - Table view data source
@@ -31,8 +40,8 @@ class SubjectDetailTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return subject.assignments.count
+
+        return focusedAssignments.count
     }
 
     
@@ -40,7 +49,7 @@ class SubjectDetailTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "assignmentCell", for: indexPath)
 
         if let cell = cell as? SubjectDetailTableViewCell {
-            let currentSubject = subject.assignments[indexPath.row]
+            let currentSubject = focusedAssignments[indexPath.row]
             cell.progressView.progress = Float(currentSubject.completion)
             cell.completionLabel.text = "\(Int(round(currentSubject.completion * 100)))%"
             cell.dueDateLabel.text = currentSubject.getStringDate()

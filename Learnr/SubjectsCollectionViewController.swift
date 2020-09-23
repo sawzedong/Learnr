@@ -3,24 +3,24 @@ class SubjectsCollectionViewController: UICollectionViewController, UICollection
     
     let reuseIdentifier = "subjectCell"
     
-    // placeholder items
-    var items: [Subject] = [
-        Subject(name: "Physics", assignments: [
-            Assignment(name: "Homework 1", completion: 0.5, timeIntervalSince1970: 1601049540),
-            Assignment(name: "Homework 2", completion: 0.7, timeIntervalSince1970: 1601540700),
-            Assignment(name: "Homework 3", completion: 0.3, timeIntervalSince1970: 1601740740),
-        ]),
-        Subject(name: "2", assignments: []),
-        Subject(name: "3", assignments: []),
-        Subject(name: "4", assignments: []),
-        Subject(name: "5", assignments: [])
-    ]
+    var items: [Subject] = []
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if items.count == 0 {
+            items = Subject.retrievePlaceholderData()
+        }
+        
+    }
     
     
     // MARK: - UICollectionViewDataSource protocol
     
     // number of cells in collection view
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return self.items.count
     }
     
