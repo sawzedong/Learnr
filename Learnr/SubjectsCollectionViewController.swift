@@ -9,9 +9,13 @@ class SubjectsCollectionViewController: UICollectionViewController, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if items.count == 0 {
+        if let loadedItems = Subject.loadFromFile() {
+            items = loadedItems
+        } else {
             items = Subject.retrievePlaceholderData()
+            Subject.saveToFile(subjectItems: items)
         }
+        
         
     }
     
@@ -29,7 +33,7 @@ class SubjectsCollectionViewController: UICollectionViewController, UICollection
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! SubjectsCollectionViewCell
         cell.subjectLabel.text = self.items[indexPath.row].name
-        cell.backgroundColor = self.items[indexPath.row].color
+        cell.backgroundColor = self.items[indexPath.row].getColor()
         
         //for shadow and outline - Vicky
         //cell.layer.shadowColor = UIColor.black.cgColor
@@ -92,6 +96,7 @@ class SubjectsCollectionViewController: UICollectionViewController, UICollection
                 self.items.append(
                     Subject(name: answer.text!)
                 );
+                Subject.saveToFile(subjectItems: self.items)
                 self.collectionView.reloadData()
             }
         }

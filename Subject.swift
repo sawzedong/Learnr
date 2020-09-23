@@ -10,27 +10,32 @@ import Foundation
 import UIKit
 
 // note: please add other information if needed
-enum completionStatus {
+enum completionStatus: CaseIterable {
     case overdue, incomplete, complete
 }
 
-class Subject {
+class Subject: Codable {
     var name: String
     var assignments: [Assignment]
-    var color: UIColor
+    var colorHue: CGFloat
     
     // initialised with assignments
     init(name: String, assignments: [Assignment]) {
         self.name = name
         self.assignments = assignments
-        self.color = UIColor(hue: CGFloat.random(in: 0...1), saturation: 0.3, brightness: 0.97, alpha: 1)
+        self.colorHue = CGFloat.random(in: 0...1)
     }
     
     // initialised without assignments, default to no assignments
     init(name: String) {
         self.name = name
         self.assignments = []
-        self.color = UIColor(hue: CGFloat.random(in: 0...1), saturation: 0.3, brightness: 0.97, alpha: 1)
+        self.colorHue = CGFloat.random(in: 0...1)
+
+    }
+    
+    func getColor() -> UIColor {
+        return UIColor(hue: self.colorHue, saturation: 0.3, brightness: 0.97, alpha: 1)
     }
     
     static func retrievePlaceholderData() -> [Subject] {
@@ -51,72 +56,84 @@ class Subject {
            
            return items
        }
+    
+    
+    static func getArchiveURL() -> URL {
+        let plistName = "subjects"
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        return documentsDirectory.appendingPathComponent(plistName).appendingPathExtension("plist")
+    }
+    
+    static func saveToFile(subjectItems: [Subject]) {
+        let archiveURL = getArchiveURL()
+        let propertyListEncoder = PropertyListEncoder()
+        let encodedData = try? propertyListEncoder.encode(subjectItems)
+        try? encodedData?.write(to: archiveURL, options: .noFileProtection)
+    }
+    
+    static func loadFromFile() -> [Subject]? {
+        let archiveURL = getArchiveURL()
+        let propertyListDecoder = PropertyListDecoder()
+        guard let retrievedData = try? Data(contentsOf: archiveURL) else { return nil }
+        guard let decodedData = try? propertyListDecoder.decode(Array<Subject>.self, from: retrievedData) else { return nil }
+        return decodedData
+    }
+    
 }
 
-class Assignment {
+class Assignment: Codable {
     var name: String
     var completion: Double
-    var dueDate: Date
-    var completeStatus: completionStatus
+    var timeIntervalSince1970: Double
+    var completeStatus: Int // see completionStatus, where index starts from 0
     
     // initialised with unix epoch time
     init(name: String, completion: Double, timeIntervalSince1970: Double) {
         self.name = name
         self.completion = completion
-        self.dueDate = Date(timeIntervalSince1970: timeIntervalSince1970)
-        self.completeStatus = .incomplete
+        self.timeIntervalSince1970 = timeIntervalSince1970
+        self.completeStatus = 1
     }
     
-    init(name: String, completion: Double, timeIntervalSince1970: Double, completeStatus: completionStatus) {
+    init(name: String, completion: Double, timeIntervalSince1970: Double, completeStatus: Int) {
         self.name = name
         self.completion = completion
-        self.dueDate = Date(timeIntervalSince1970: timeIntervalSince1970)
-        self.completeStatus = completeStatus
-    }
-    
-    // initialised with an NSDate object
-    init(name: String, completion: Double, dueDate: Date, completeStatus: completionStatus) {
-        self.name = name
-        self.completion = completion
-        self.dueDate = dueDate
+        self.timeIntervalSince1970 = timeIntervalSince1970
         self.completeStatus = completeStatus
     }
     
     // initialised with unix epoch time (default 0 completion)
-    init(name: String, timeIntervalSince1970: Double, completeStatus: completionStatus) {
+    init(name: String, timeIntervalSince1970: Double, completeStatus: Int) {
         self.name = name
         self.completion = 0
-        self.dueDate = Date(timeIntervalSince1970: timeIntervalSince1970)
-        self.completeStatus = .incomplete
-    }
-    
-    // initialised with an NSDate object (default 0 completion)
-    init(name: String, dueDate: Date, completeStatus: completionStatus) {
-        self.name = name
-        self.completion = 0
-        self.dueDate = dueDate
-        self.completeStatus = .incomplete
+        self.timeIntervalSince1970 = timeIntervalSince1970
+        self.completeStatus = completeStatus
     }
     
     func getStringDate() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MMM yyyy, HH:mm"
-        
-        let myString = formatter.string(from: self.dueDate)
+        let dueDate = Date(timeIntervalSince1970: self.timeIntervalSince1970)
+        let myString = formatter.string(from: dueDate)
 
         return myString
     }
     
     func updateCompletion() {
-        if self.dueDate > Date() && self.completeStatus != .complete {
-            self.completeStatus = .incomplete
-        } else if self.dueDate < Date() && self.completeStatus != .complete {
-            self.completeStatus = .overdue
+        let dueDate = Date(timeIntervalSince1970: self.timeIntervalSince1970)
+        if dueDate > Date() && self.completeStatus != 2 {
+            self.completeStatus = 1
+        } else if dueDate < Date() && self.completeStatus != 2 {
+            self.completeStatus = 0
         }
         
         if self.completion == 1 {
-            self.completeStatus = .complete
+            self.completeStatus = 2
         }
+    }
+    
+    func getCompletionStatus() -> completionStatus {
+        return completionStatus.allCases[self.completeStatus]
     }
     
    

@@ -20,7 +20,7 @@ class SubjectDetailTableViewControllerDeprecated: UITableViewController {
             assignment.updateCompletion()
             print(assignment.completeStatus)
         }
-        focusedAssignments = subject.assignments.filter { $0.completeStatus == focusedCompletion }
+        focusedAssignments = subject.assignments.filter { $0.getCompletionStatus() == focusedCompletion }
         
         self.tableView.reloadData()
     }

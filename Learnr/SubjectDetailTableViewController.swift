@@ -20,9 +20,8 @@ class SubjectDetailTableViewController: UIViewController, UITableViewDelegate, U
     func loadData() {
         for assignment in subject.assignments {
             assignment.updateCompletion()
-            print(assignment.completeStatus)
         }
-        focusedAssignments = subject.assignments.filter { $0.completeStatus == focusedCompletion }
+        focusedAssignments = subject.assignments.filter { $0.getCompletionStatus() == focusedCompletion }
         
         self.assignmentsTableView.reloadData()
     }
@@ -54,7 +53,7 @@ class SubjectDetailTableViewController: UIViewController, UITableViewDelegate, U
             cell.dueDateLabel.text = currentSubject.getStringDate()
             cell.homeworkNameLabel.text = currentSubject.name
             
-            if currentSubject.completeStatus == .complete {
+            if currentSubject.getCompletionStatus() == .complete {
                 cell.progressView.tintColor = .systemGreen
             } else {
                 cell.progressView.tintColor = .systemRed
