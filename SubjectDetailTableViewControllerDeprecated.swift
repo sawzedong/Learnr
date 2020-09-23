@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SubjectDetailTableViewController: UITableViewController {
+class SubjectDetailTableViewControllerDeprecated: UITableViewController {
 
     var subject: Subject!
     var focusedCompletion: completionStatus = .overdue
